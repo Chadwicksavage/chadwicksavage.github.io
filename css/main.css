@@ -2,8 +2,17 @@
 ---------  Universal ----------
 =============================*/
 
-/* {
-	border: solid red 1px;
+/*{
+	border: solid red .1px;
+} */
+
+
+*,*:before,*:after {
+	box-sizing: border-box;
+}
+
+:after {
+	content: "";
 }
 
 /* --- Container Override --- */
@@ -12,7 +21,7 @@
 }
 
 body {
-  background-color: #fff;
+  background-color: #000;
 
 }
 
@@ -21,177 +30,227 @@ body {
   overflow: hidden;
 }
 
-/* ===========================
-----------  Links  -----------
-=============================*/
-a,
-a:active,
-a:visited {
+/* --- Links --- */
+a:link, 
+a:visited,
+a:hover,
+a:active {
+	color: white;
+}
+
+.col-xs-12 {
+	color: white;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+  padding-top: 40vh;
   color: white;
 }
-
-a:hover {
-  color: #cdc1c4;
-}
-
-
-
 /* ===========================
-----------  Fonts -----------
+--------- Navigation ----------
 =============================*/
 
-@font-face {
-	font-family: Quickpen;
-	src: url("../fonts/Quickpen.otf");
+nav {
+	float: left;
+	position: fixed;
+	top: 25vh;
+ 	left: 0;
+	background: transparent;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,300,700|Open+Sans:400italic,300italic);
-
-h1 {
-	font-family: 'Quickpen', sans-serif;
-	font-size: 2.7em;
-	color: #000;
+nav ul {
 	text-align: center;
-	padding: .75em 0;
-	line-height: 1.5em;
+	list-style-type: none;
+	padding-left: 0;
+	display: none;
+}
+
+nav ul li {
+	position: relative;
+	width: 70px;
+	height: 70px;
+	cursor: pointer;
+	text-transform: uppercase;
+	transition: all .4s ease-out;
+	color: white;
+
+	
+}
+
+nav ul li:after {
+	position: absolute;
+	top: 0;
+	left: 70px;
+	width: 70px;
+	height: 100%;
+	opacity: .5;
+	transform: perspective(400px) rotateY(90deg);
+	transform-origin: 0 100%;
+	transition: all .4s ease-out;
+
+}
+
+nav ul li:nth-child(1):after {
+	content: "Home";
+	line-height: 70px;
+	
+}
+
+nav ul li:nth-child(2):after { 
+	content: "About";
+	line-height: 70px;
+	
+}
+nav ul li:nth-child(3):after { 
+	content: "Work";
+	line-height: 70px;
+	
+}
+nav ul li:nth-child(4):after { 
+	content: "Contact";
+	line-height: 70px;
+
+}
+
+nav ul li:hover {
+	transform: translateX(-70px);
+}
+
+nav ul li:hover:after {
+	opacity: 1;
+	transform: perspective(400px) rotateY(0deg) scale(1);
+
+
+}
+
+nav ul li > div {
+	display: inline-block;
+	padding: 20px 20px;
+	background: transparent;
+}
+
+nav ul li div {
+	position: relative;
+}
+/* --- Button Colors --- */
+
+#home {
+	background: #ff005d;
+}
+
+#home:after {
+	background: rgba(255, 0, 93, 0.8);
+	color: white;
+
+}
+
+#work {
+	background: #4d89ff;
+}
+
+#work:after {
+	background: rgba(77, 137, 255, 0.8);
+	color: white;
+
+}
+
+#about {
+	background: #00ff85;
+}
+
+#about:after {
+	background: rgba(0, 255, 133, 0.8);
+	color: white;
+}
+
+#contact {
+	background: #fcf37b;
+}
+
+#contact:after {
+	background: rgba(252, 243, 123, 0.8);
+	color: white;
 }
 
 
 
-h2{
-	font-family: 'Quickpen', cursive;
-	font-size: 2.2em;
-	color: #fff;
-	text-align: left;
-  padding: 1em 0;
+/* --- Nav Links --- */
 
-}
 
-p {
-  font-family: 'Quickpen', sans-serif;
-  font-size: 1.6em;
-  text-align: left;
-  color: #fff;
-  line-height: 1.6em;
+.offset {
+	margin: 2px 2px;
+	height: 65px;
+	width: 65px;
+	cursor: pointer;
+	position: absolute;
+	list-style-type: none;
+	z-index: 2;
 
-}
-
-h3 /* ---Feature Text--- */{
-  font-family: 'Lato', sans-serif;
-  font-size: 6em;
-  text-align: center;
-  color: #fff;
-  padding-top: .5em;
-}
-
-h4 {
-  font-family: 'Oswald', sans-serif;
-  font-size: 1.4em;
-  text-align: center;
-  color: #fff;
 }
 
 /* ===========================
--------  Page Elements --------
-=============================*/
-.display_tag {
-  top: 80px;
-}
-
-.bg_offwhite {
-  background-color: #e0d7da;
-}
-
-.back2top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  color: #fff;
-}
-
-ul li {
-  list-style: none;
-}
-.logo-wrap {
-  width: 130px;
-  height: 130px;
-
-
-}
-
-.logo {
- max-width: 100%;
- height: auto;
- padding-top: 15px;
- padding-left: 30px;
-
-
-}
-
-
-.valign_feature {
-  margin-top: 30vh;
-}
-/* ===========================
--------  Image Styling --------
+------------ SVG -------------
 =============================*/
 
-
-/* ------ For Outside Container (Body) ------ */
-
-.feature {
-	background: linear-gradient(rgba(129, 108, 131, 0.7), rgba(129, 108, 131, 0.7)), url("../images/gemsbok_background.png");
-	background-repeat: no-repeat;
-	background-size: cover;
-	height: 100vh;
+.container {
+  	 width: 800px;
+     max-width: 90vw;
+     height: 400px;
+  	 position: absolute;
+  	 top: 40vh;
+  	 left: 25vw;
 
 }
-
-/* ------ Card Images ----- */
-
-.wetlands {
-  background: linear-gradient(rgba(190, 192, 158, 0.7), rgba(190, 192, 158, 0.7)), url("../images/wetlands.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+.container svg {
+  	fill: none;
+}
+.container svg path {
+  -webkit-transition: fill .3s ease-in-out;
+  fill: transparent;
+  stroke-width: 1px;
+}
+.container.completed svg path {
+  -webkit-transition: fill .3s ease-in-out;
+  transition: fill .3s ease-in-out;
+  fill: #fff;
 }
 
-.impala {
-  background: linear-gradient(rgba(241, 193, 141, 0.5), rgba(241, 193, 141, 0.5)), url("../images/impala.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+.container.completed svg path:nth-child(4n+23)  {
+  -webkit-transition: fill .3s ease-in-out;
+  transition: fill .3s ease-in-out;
+  fill: #ff005d;
 }
 
-.snow_fox {
-  background: linear-gradient(rgba(216, 236, 237, 0.1), rgba(216, 236, 237, 0.5)), url("../images/fox.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+.container.completed svg path:nth-child(4n+24)  {
+  -webkit-transition: fill .3s ease-in-out;
+  transition: fill .3s ease-in-out;
+  fill: #00ff85;
 }
 
-.skye {
-  background: linear-gradient(rgba(143, 150, 166, 0.4), rgba(143, 150, 166, 0.5)), url("../images/skye.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+.container.completed svg path:nth-child(4n+25)  {
+  -webkit-transition: fill .3s ease-in-out;
+  transition: fill .3s ease-in-out;
+  fill: #4d89ff;
 }
 
+.container.completed svg path:nth-child(4n+26)  {
+  -webkit-transition: fill .3s ease-in-out;
+  transition: fill .3s ease-in-out;
+  fill: #fcf37b;
+}
 
+/* ======================
+------ Portfolio --------
+======================= */
 
-
-
-
-
-/* ===========================
---------  Navigation ---------
-=============================*/
-
-.nav-wrap {
+.work-wrap {
   position: relative;
 }
 
-.nav-menu {
+.work-menu {
   position: fixed;
   z-index: 99;
   top: 0;
@@ -203,15 +262,15 @@ ul li {
   opacity: 0;
 }
 
-nav, 
-nav ul {
+.work-menu, 
+.work-menu ul {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-nav ul {
+.work-menu ul {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -219,10 +278,10 @@ nav ul {
   list-style: none;
 }
 
-nav ul li {
-  -webkit-flex-basis: 20%;
-  -ms-flex-preferred-size: 20%;
-  flex-basis: 20%;
+.work-menu ul li {
+  -webkit-flex-basis: 25%;
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -238,9 +297,9 @@ nav ul li {
 
 }
 
-nav li a {
+.work-menu li a {
   position: relative;
-  top: 46%;
+  top: 30%;
   color: #fff;
   text-transform: uppercase;
   font-family: 'Work sans', sans-serif;
@@ -253,7 +312,7 @@ nav li a {
   opacity: 0;
 }
 
-nav li a:before {
+.work-menu li a:before {
   content: '';
   width: 70px;
   height: 2px;
@@ -270,9 +329,9 @@ nav li a:before {
   transition: all .2s linear;
 }
 
-nav li a:after {
+.work-menu li a:after {
   content: attr(data-content);
-  font-size: 1rem;
+  font-size: 2rem;
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
   opacity: 0;
@@ -292,39 +351,37 @@ nav li a:after {
   letter-spacing: 0;
 }
 
-nav li a:hover:before {
+.work-menu li a:hover:before {
   -webkit-transform: translateX(0);
   -ms-transform: translateX(0);
   transform: translateX(0);
   opacity: 1;
 }
 
-nav li a:hover:after {
-  -webkit-transform: translateY(15px);
-  -ms-transform: translateY(15px);
-  transform: translateY(15px);
+.work-menu li a:hover:after {
+  -webkit-transform: translateY(150px);
+  -ms-transform: translateY(150px);
+  transform: translateY(150px);
   opacity: 1;
 }
 
-nav li:nth-of-type(1) {
-  background-color: #29363B
+.work-menu li:nth-of-type(1) {
+  background-color: #000;
 }
 
-nav li:nth-of-type(2) {
-  background-color: #EA495F
+.work-menu li:nth-of-type(2) {
+  background-color: #4d89ff;
 }
 
-nav li:nth-of-type(3) {
-  background-color: #F4837D
+.work-menu li:nth-of-type(3) {
+  background-color: #00ff85;
 }
 
-nav li:nth-of-type(4) {
-  background-color: #FDCEA9
+.work-menu li:nth-of-type(4) {
+  background-color: #ff005d;
 }
 
-nav li:nth-of-type(5) {
-  background-color: #99B998
-}
+
 
 /* ====================================
 ---------- Menu Icon ------------------
@@ -332,12 +389,18 @@ nav li:nth-of-type(5) {
 
 .triple_lines {
   position: absolute;
-  right: 5rem;
-  top: 3.2rem;
+  right: 50%;
+  top: 3vh;
   z-index: 100;
   width: 34px;
   display: block;
   cursor: pointer;
+}
+
+.fixed_menu {
+  position: fixed;
+  right: 5rem;
+  top: 3rem;
 }
 
 .triple_lines span {
@@ -487,7 +550,7 @@ Animation keyframes
   }
 }
 
-.nav-wrap a {
+.work-wrap a {
   font-family: "Work Sans", sans-serif;
   color: #222;
   font-weight: 300;
@@ -503,43 +566,68 @@ Animation keyframes
 }
 
 @media (max-width: 640px) {
-  nav ul {
+  .work-menu ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
   }
-  nav ul li {
+  .work-menu ul li {
     height: 20%;
   }
-  nav ul li a {
-    font-size: 11px;
+  .work-menu ul li a {
+    font-size: 16px;
   }
-  nav li a:after {
-    font-size: 0.6rem;
+  .work-menu li a:after {
+    font-size: 1rem;
     bottom: -25px;
   }
-  nav li a:hover:after {
+  .work-menu li a:hover:after {
     transform: translateY(0);
   }
   .triple_lines {
     right: 1rem;
   }
-  nav li a:before {
+  .work-menu li a:before {
     width: 25px;
   }
 }
 
 
+/* ====================================
+Portfolio Images
+==================================== */
 
 
-/* ===========================
--------  Media Queries --------
-=============================*/
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  margin-top: 2%;
+}
+
+.lightbox:target {
+  outline: none;
+  display: block;
+}
 
 
 
-/*
-Add Breakpoint for Resizing Background Image Smaller Than 1049
-Maybe Adjust the Image
+
+
+
+
+
+
