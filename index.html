@@ -1,115 +1,161 @@
-<!DOCTYPE html> <!-- Tells the Browser that this document is an html document -->
-<html lang="en"> <!-- Tells the Browser that this document's primary language is english -->
+<!DOCTYPE html>
+<html lang=en>
 
-	<head> <!-- All the stuff you don't see that sets up the webpage -->
-		
-		<meta charset="utf-8"> <!-- Which set of keyboard characters to use --> 
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"><!-- Makes it work with old microsoft edge -->
-		<meta name="viewport" content="width=device-width, initial-scale=1"><!-- Content should be the same width as the viewport (the size of the window you're viewing it on) -->
-		
-		<!--Fonts-->
-			<!-- I will show you how to import these from google -->
-		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"> 
-    		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-    		<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<head>
 
-		
-			<title>Chadwick Savage</title> <!-- This is what shows up in the tab up top -->
-		
-		<!-- Bootstrap -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		
-		<!-- Custom Styles -->
-		<link rel="stylesheet" href="css/main.css">
-		
-		 
-	</head>
-	
-	<body>
-		<!-- Wrapper -->
+	<!-- Initialize Viewport -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="x-ua-compatible" content="ie-edge">
+
+	<!-- Broswer Tab Text -->
+	<title>Chadwick Savage</title>
+
+	<!-- Stylesheets -->
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- Custom Styles -->
+	<link rel="stylesheet" href="css/main.css">
+
+
+	<!-- Imported Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Arizonia|Zilla+Slab+Highlight" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Oswald" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+	<!-- Navigation -->
+	<nav>
+		<ul id="mainnav">
+			<li id="home"><div><i class="fa fa-home fa-2x" aria-hidden="true"></i></div><a href="#top" class="offset"></a></li>
+
+			<li id="about"><div><i class="fa fa-info fa-2x" aria-hidden="true"></i></div><a href="#info" class="offset"></a></li>
+
+			<li id="work"><div><i class="fa fa-laptop fa-2x" aria-hidden="true"></i></div><a href="#portfolio" class="offset"></a></li>
+
+			<li id="contact"><div><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i></div><a href="#email" class="offset"></a></li>
+		</ul>
+	</nav>
+
+	<!-- Content -->
+
+	<div class="row fullheight" id="top">
+		<!-- Animated Opening Using Anime.js -->
 		<div class="container">
+			<svg viewbox="0 0 1400 400" id="logo">
+				<g fill="none" fill-rule="evenodd">
+		 			<path class="st0" stroke="#FFF" d="M308.05,446.81h28v8.59H299.47V396h8.59Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M348,446.81h27.63v8.59h-36.3V396h36.21v8.59H348v16.75h26.95V430H348Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M392.63,455.65V403.88h-18v-8h44.54v8H401.21v51.77Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M430.28,395.81v21.08h-8.16V395.81Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M467.51,411.28c-1.19-5.36-7-7.65-12.16-7.57-4,.08-8.42,1.45-10.8,4.51a7.79,7.79,0,0,0-1.45,5.53c.43,6.12,7.14,6.89,13.52,7.48,8.16,1,18.28,3.15,20.57,12.67a21.16,21.16,0,0,1,.42,3.91c0,11.48-11.39,18.11-22.1,18.11-9.18,0-20.32-5.44-21.42-16.07l-.08-1.62,8.67-.17.08,1.27V439c.6,5.53,7.31,8.42,12.84,8.42,6.38,0,13.35-3.57,13.35-9.69a9.54,9.54,0,0,0-.25-2c-1-4.51-7.14-5.27-13.09-5.87-9.27-.94-20.15-3-21.08-15.39v.08a16.1,16.1,0,0,1,3.23-11.31c4-5.19,11.14-7.91,18-7.91,9.18,0,18.7,4.76,20.23,15.64Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M544.52,411.28c-1.19-5.36-7-7.65-12.16-7.57-4,.08-8.42,1.45-10.8,4.51a7.79,7.79,0,0,0-1.45,5.53c.43,6.12,7.14,6.89,13.52,7.48,8.16,1,18.28,3.15,20.57,12.67a21.16,21.16,0,0,1,.42,3.91c0,11.48-11.39,18.11-22.1,18.11-9.18,0-20.32-5.44-21.42-16.07l-.08-1.62,8.67-.17.08,1.27V439c.6,5.53,7.31,8.42,12.84,8.42,6.38,0,13.35-3.57,13.35-9.69a9.54,9.54,0,0,0-.25-2c-1-4.51-7.14-5.27-13.09-5.87-9.27-.94-20.15-3-21.08-15.39v.08a16.1,16.1,0,0,1,3.23-11.31c4-5.19,11.14-7.91,18-7.91,9.18,0,18.7,4.76,20.23,15.64Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M567.47,446.81h27.63v8.59H558.8V396H595v8.59H567.47v16.75h26.95V430H567.47Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M607.25,446.81h27.63v8.59h-36.3V396h36.21v8.59H607.25v16.75h26.95V430H607.25Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M701,427.09c-3.4,9.69-7.23,19.64-10.29,28.65h-6L664.7,396h8.93l14.2,42.93,9.78-27.8h6.89l9.69,27.71c4.68-14.2,9.86-29.33,14.28-42.84h9l-20,59.76h-6Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M749.45,421.05h25.16V396h8.67V455.4h-8.67V429.55H749.45V455.4h-8.59V396h8.59Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M823.32,437.89H802c-2.29,5.44-5.27,12.58-7.14,17.51h-9.27l23.89-60.27h6.29l23.89,60.27h-9.18Zm-18.11-8.08H820l-7.31-21Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M848.47,455.65V403.88h-18v-8H875v8H857.06v51.77Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M941.21,427.09c-3.4,9.69-7.23,19.64-10.29,28.65h-6l-20-59.76h8.93L928,438.91l9.78-27.8h6.89l9.69,27.71c4.68-14.2,9.86-29.33,14.28-42.84h9l-20,59.76h-6Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M989.49,446.81h27.63v8.59h-36.3V396H1017v8.59H989.49v16.75h26.95V430H989.49Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M1058.25,404.48a28.7,28.7,0,0,1,20.57-8.84c13.6,0,24.31,8.5,27.71,21.93H1098c-3.14-8.93-10.46-13.43-19.21-13.43a20.24,20.24,0,0,0-14.62,6.38,22,22,0,0,0,0,30.43,20.48,20.48,0,0,0,34.34-7.82H1107c-3.4,13.52-14.28,22.7-28.14,22.7a28.36,28.36,0,0,1-20.57-8.84,30.82,30.82,0,0,1,0-42.5Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M1143.08,437.89h-21.34c-2.29,5.44-5.27,12.58-7.14,17.51h-9.27l23.89-60.27h6.29l23.89,60.27h-9.18ZM1125,429.81h14.79l-7.31-21Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M1162.12,455.4V395.81l6.63.08,29,41.91V395.89h8.5v59.5h-6.8l-28.73-41.57V455.4Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M1266.75,396a14.86,14.86,0,0,1,14.45,9.78c2.38,5.87,1.62,12.67-4.34,16.92,6.8,2.89,9.27,9.18,9.27,14.79,0,8.93-5.87,17.94-17.26,17.94H1242V396Zm-16.24,23.63h16.07c9.35,0,9.52-15.47.17-15.47h-16.24Zm0,27.46h18.36c5.78,0,8.67-4.85,8.67-9.52s-2.89-9.44-8.67-9.44h-18.36Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M1290.89,437.55V396h8.67v41.65c0,6.55,7.06,9.78,13.35,9.78s13.26-3.31,13.26-9.86V396h8.67v41.65c0,12.07-11.73,18.36-21.93,18.36C1302.45,456,1290.89,449.7,1290.89,437.55Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M1372.32,404.48h-11.05v42.33h11.05v8.59h-30.69v-8.59h11.05V404.48h-11.05V396h30.69Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M1385.16,446.81h28v8.59h-36.55V396h8.59Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#FFF" d="M1438.2,396c19.47,0,29.24,14.88,29.24,29.75s-9.78,29.67-29.24,29.67h-21.34V396Zm0,50.83c13.77,0,20.74-10.54,20.74-21.08s-7-21.17-20.74-21.17h-12.75v42.25Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#ff005d" d="M709.71,557.65V505.88h-18v-8h44.54v8H718.3v51.77Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#00ff85" d="M742.18,506.14a30.07,30.07,0,0,1,42.93,0,30.58,30.58,0,0,1,0,43,30.07,30.07,0,0,1-42.93,0,30.58,30.58,0,0,1,0-43ZM779,512.26a21.88,21.88,0,0,0-15.39-6.46,21.34,21.34,0,0,0-15.22,6.46,21.75,21.75,0,0,0,0,30.77,21.34,21.34,0,0,0,15.22,6.46A21.88,21.88,0,0,0,779,512.26Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#4d89ff" d="M846.57,519.23c-2.38-9.61-11.56-13.09-19.13-13.09-11.65,0-20.66,9.1-20.66,21.59s9,21.85,20.66,21.85c7.31,0,15.13-3.4,18.7-12.07h-22v-8.59h32c-.42,5-.85,8.33-1.62,10.29v-.08c-4.08,11.39-16.32,18.7-27.12,18.7-16.66,0-29.24-12.58-29.24-30.09s12.84-30.18,29.24-30.18c11.39,0,25.16,5.87,28.31,21.68Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#fcf37b" d="M869.26,548.81h27.63v8.59h-36.3V498H896.8v8.59H869.26v16.75H896.2V532H869.26Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#ff005d" d="M913.88,557.65V505.88h-18v-8H940.4v8H922.47v51.77Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#00ff85" d="M952.81,523.05H978V498h8.67V557.4H978V531.56H952.81V557.4h-8.59V498h8.59Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#4d89ff" d="M1000.5,548.81h27.63v8.59h-36.3V498H1028v8.59H1000.5v16.75h26.95V532H1000.5Z" transform="translate(-299.47 -395.13)"/>
+				    <path class="st0" stroke="#fcf37b" d="M1043.67,527.22h10c7.23,0,10.8-5.18,10.8-10.37s-3.57-10.29-10.8-10.29h-13.18V557.4H1032v-59.5h21.68c12.92,0,19.38,9.52,19.38,19,0,8.42-5.19,16.41-15.39,18.19l18.79,22.36h-11.14l-21.68-26.1Z" transform="translate(-299.47 -395.13)"/>
+				</g>
+			</svg>
+		</div><!-- Close SVG Container -->
+	</div>
 
+	<div class="row fullheight"  id="info">
+		<div class="col-xs-12">info</div>
+	</div>
 
-			<!-- Navigation -->
-			
-			<div class="nav-menu" name="top">
-				<nav role="navigation">
-					<ul>
-						<li><a href="index.html" data-content="Change this Text to Describe Home">Home</a></li>
-
-						<li><a href="pages/about.html" data-content="This can be a quote, funny saying, short description, etc">About</a></li>
-
-						<li><a href="pages/blog.html" data-content="Tell your story through a blog if you wish, blog about the career you want or whatever your passion is">Blog</a></li>
-
-						<li><a href="pages/work.html" data-content="You can share your resume or something here">My Work</a></li>
-
-						<li><a href="pages/contact.html" data-content="contact information or short catchy phrase like press 1 now to speak to me">Contact</a></li>
-					</ul>
-				</nav>
+	<div class="row fullheight" id="portfolio">
+		<!-- Velocity.js Portfolio View -->
+		<h2>Let's Explore My Work</h2>
+		<section class="work-wrap">
+			<div class="triple_lines">
+				<span class="bar-top"></span>
+				<span class="bar-middle"></span>
+				<span class="bar-bottom"></span>
 			</div>
-			
-			<!-- Hamburger Menu -->
+		</section>
 
-			<section class="nav-wrap">
-				<div class="triple_lines">
-					<span class="bar-top"></span>
-					<span class="bar-middle"></span>
-					<span class="bar-bottom"></span>
-				</div>
-			</section>
-			
-			<!-- Back to Top Arrow --> 
-			
-			<div class="back2top">
-				<a href="https://www.instagram.com/" class="white"><i class="fa fa-instagram fa-2x"></i></a>
+		<!-- Velocity.js full screen cover --> 
+			<div class="work-menu" name="top">
+				<ul>
+					<li><a href="#wordpress" data-content="Wordpress blog layouts using the Divi and Extra themes. Used for rapid website deployment for existing clients of East West Media">Wordpress</a></li>
+
+					<li><a href="#wordpress" data-content="Conservationist, Adventurer, Guide, Medic, Teacher, Designer">About</a></li>
+
+					<li><a href="#wordpress" data-content="A Carpenter is Only as Good as His Hammer">Tools</a></li>
+
+					<li><a href="#wordpress" data-content="Oh, the things you can make it only you try">Works</a></li>
+				</ul>
+
+				<!-- Lightbox Images -->
+				<a href="#_" class="lightbox" id="wordpress"><img src="img/wordpress_extra_divi.png"></a>
+				<a href="#_" class="lightbox" id="wordpress"><img src="img/wordpress_extra_divi.png"></a>
+				<a href="#_" class="lightbox" id="wordpress"><img src="img/wordpress_extra_divi.png"></a>
+				<a href="#_" class="lightbox" id="wordpress"><img src="img/wordpress_extra_divi.png"></a>
 			</div>
-			
-			<!-- Home Info -->
-			<div class="row feature">
-				<div class="col-xs-6"></div>
-				<div class="col-xs-6"></div>
-			</div>
-			
-		
-		<!--Close Wrapper-->	
-		</div>
-		
-		<!-- Scripts add interactivity to our website -->
-		
-		<!-- JQuery -->
-		<script
-		  src="https://code.jquery.com/jquery-3.2.1.min.js"
-		  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-		  crossorigin="anonymous">
-		</script>
-
-		<!-- Bootstrap Javascript -->
-		<script 
-			src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
-		</script>
-
-		<!-- Velocity.js -->
-		<script 
-			src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js">
-		</script>
-
-		<script 
-			src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js">
-		</script>
+	</div>
 
 
 
-		<!-- Custom JavaScript -->
-		<script 
-			src="js/main.js">
-		</script>
+	<div class="row fullheight" id="email">
+		<div class="col-xs-12">email</div>
+	</div>
+
 	
-		
-	</body>
+<!-- Scripts -->
+
+<!-- jQuery -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous">
+</script>
+
+<!-- Anime.js -->
+<script 
+	src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js">
+</script>
+
+<!-- Velocity.js -->
+<script 
+	src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js">
+</script>
+
+<script 
+	src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js">
+</script>
+
+<!-- Custom JavaScript -->
+<script 
+	src="js/main.js">
+</script>
+
+</body>
+
 </html>
-	
-	
-		
