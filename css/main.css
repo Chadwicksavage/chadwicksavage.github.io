@@ -30,6 +30,11 @@ body {
   overflow: hidden;
 }
 
+.halfheight {
+	height: 70vh;
+	overflow: hidden;
+}
+
 /* --- Form --- */
 form {
   display: block;
